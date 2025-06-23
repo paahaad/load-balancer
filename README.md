@@ -1,6 +1,16 @@
+
 # Load Balancer
 
 A high-performance HTTP load balancer implemented in Rust with multiple load balancing algorithms, health checking, and real-time monitoring.
+
+## Demo
+https://github.com/user-attachments/assets/79d51ed8-fb67-4af8-97f5-923e64d76be6
+
+
+
+Uploading loom.mp4…
+
+
 
 ## 🎯 **Features Implemented**
 
