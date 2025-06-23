@@ -54,7 +54,7 @@ PORT=3003 cargo run --bin test_server
 
 ```bash
 # Terminal 4 - Load balancer on port 8080
-cargo run --bin lb
+cargo run --bin load_balancer
 ```
 
 ### 4. Test the load balancer
@@ -75,7 +75,7 @@ curl http://localhost:8080/lb-stats
 ### Command Line Options
 
 ```bash
-cargo run --bin lb -- --help
+cargo run --bin load_balancer -- --help
 ```
 
 ```
@@ -92,13 +92,13 @@ Options:
 
 ```bash
 # Use least connections algorithm
-cargo run --bin lb -- --algorithm least_connections
+cargo run --bin load_balancer -- --algorithm least_connections
 
 # Custom backends and port
-cargo run --bin lb -- --port 9000 --backends "192.168.1.10:8001,192.168.1.11:8001,192.168.1.12:8001"
+cargo run --bin load_balancer -- --port 9000 --backends "192.168.1.10:8001,192.168.1.11:8001,192.168.1.12:8001"
 
 # Random algorithm with frequent health checks
-cargo run --bin lb -- --algorithm random --health-check-interval 10
+cargo run --bin load_balancer -- --algorithm random --health-check-interval 10
 ```
 
 ## Load Balancing Algorithms
